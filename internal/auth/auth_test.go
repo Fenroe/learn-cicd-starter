@@ -9,7 +9,7 @@ import (
 func TestGetAPIKey(t *testing.T) {
 	input1 := httptest.NewRequest("GET", "/", nil).Header
 	input1.Set("Authorization", "ApiKey 1234567890")
-	expected1 := "1234567890+++"
+	expected1 := "1234567890"
 	var input2 = httptest.NewRequest("GET", "/", nil).Header
 	input2.Set("Authorization", "ApiKey HelloBanana")
 	expected2 := "HelloBanana"
